@@ -1,0 +1,239 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('/assets/img/backg.jpeg');
+    background-position: 15% 10%;
+    overflow: scroll;
+}
+
+/* Header con logo H1 y menu */
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(0, 0, 10, .7);
+    border-bottom: .5rem solid blue;
+    position: relative;
+    height: 5rem;
+    
+}
+
+.main-nav__img--logo {
+    width: 70px;
+    height: 70px; 
+}    
+
+.main-nav__h1 {
+    text-align: center;
+    color: white;
+}
+
+.main-nav__menu {
+   position: absolute;
+   top: 80px;
+   width: 100%;
+   left: -40px;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   overflow: hidden;
+}
+
+  
+.main-nav__img--bar {
+    width: 40px;
+    height: 40px;    
+}
+
+.main-nav__li {
+    list-style-type: none;
+    padding: 20px;
+    background-color: rgba(5, 5, 5, 0.9);
+}
+
+.main-nav__a {
+    text-decoration: none;
+    color: white;
+}
+
+#main-nav__menu {
+    transition: 0.5s;
+}
+
+/* Main con Grid para primer producto */
+
+.main-grid {
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: grid;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;   
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    border-radius: 20px;
+    height: 35vh;
+    gap: .5rem;
+    padding: .5rem;
+    
+}
+
+.main-grid__section {
+    background-color: rgb(255, 255, 255);
+    padding: 0.5rem;
+    border-radius: 20px;
+
+}
+
+.main-grid__section--1 {
+    grid-column: 1/2;
+    grid-row: 1/5;
+    
+}
+
+.main-grid__img {
+    height: 100%;
+    
+}
+
+.main-grid__section--2 {
+    grid-column: 2/3;
+    grid-row: 1/4;
+}
+
+.main-grid__section--3 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    height: 10vh;
+    overflow: scroll;
+}  
+
+/* Slide para mas productos */
+
+.slider {
+    height: 20vh;
+    margin: 5rem auto;
+    position: relative;
+    width: 90%;
+    border: .5rem solid black;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,.7);
+    overflow: hidden;
+}
+
+
+.slide-track {
+    display: flex;
+    width: calc(250px * 18);
+    animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 9));
+    }
+}
+
+.slide {
+    height: 20vh;
+    width: 250px;
+    
+    display: flex;
+    align-items: center;
+    perspective: 100px;
+    
+}
+
+.slide img {
+    height: 15vh;
+    box-shadow:10px 10px 20px 0 rgba(255,255, 255, 0.9);
+    transition: transform .5s;
+}
+
+img:hover {
+    transform: translateZ(20px);
+    
+}
+
+.slider::before,
+.slider::after {
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+
+.slider::before {
+    background: linear-gradient(to right, rgb(13, 13, 68) 0%, rgba(255,255,255,0)100%);
+    left: 0;
+    top: 0;
+}
+
+.slider::after {
+    background: linear-gradient(to left, rgb(13, 13, 68) 0%, rgba(255,255,255,0)100%);
+    right: 0;
+    top: 0;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ul-footer {
+    display: flex;
+  }
+  
+  .footer-info {
+    font-size: 14px;
+    display: flex;
+  }
+  
+  .footer-info a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
+  .footer-redes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-redes li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  .footer-redes a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: #eee;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .footer-redes a:hover {
+    background-color: #ccc;
+  }
