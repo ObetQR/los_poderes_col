@@ -3,7 +3,7 @@ body {
     margin: 0;
     height: 100vh;
     overflow: hidden;
-    background-image: url("/assets/img/backg.jpeg");
+    background-image: url("assets/img/backg.jpeg");
     background-position: 15% 10%;
     overflow: scroll;
 }
