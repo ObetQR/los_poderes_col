@@ -28,6 +28,7 @@ body {
 .main-nav__h1 {
     text-align: center;
     color: white;
+    font-size: 1.5rem;
 }
 
 .main-nav__menu {
@@ -69,7 +70,7 @@ body {
     width: 90%;
     background-color: rgba(0, 0, 0, 0.7);
     display: grid;
-    margin-top: 5rem;
+    margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;   
     grid-template-columns: 1fr 1fr;
@@ -115,7 +116,7 @@ body {
 
 .slider {
     height: 20vh;
-    margin: 5rem auto;
+    margin: 2rem auto;
     position: relative;
     width: 90%;
     border: .5rem solid black;
