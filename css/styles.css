@@ -6,7 +6,23 @@ body {
     background-image: url(../assets/img/backg.jpeg);
     background-position: 15% 10%;
     overflow: scroll;
+    
 }
+
+body::before {
+    content: ""; 
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit; /* Hereda la imagen de fondo del body */
+    /*filter: brightness(0.1) contrast(1) saturate(1);
+    filter: contrast(20%);
+    filter: grayscale(70%);*/
+    filter: saturate(.3);
+    z-index: -1; /* Se coloca detrás del body */
+  }
 
 /* Header con logo H1 y menu */
 .main-nav {
